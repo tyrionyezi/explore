@@ -12,14 +12,14 @@ export const formatDate = (timesTamp, format) => {
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   let day = date.getDate() + 1;
-  month = month < 10 ? ("0"+ month) : month;
+  month = month < 10 ? ("0" + month) : month;
   day = day < 10 ? ("0" + day) : day;
-  
-  if(format.includes("-")){
+
+  if (format.includes("-")) {
     date = `${year}-${month}-${day}`;
-  }else if(format.includes("/")){
+  } else if (format.includes("/")) {
     date = `${year}/${month}/${day}`;
-  }else{
+  } else {
     date = `${year}-${month}-${day}`;
   }
   return date
@@ -31,7 +31,7 @@ export const formatDate = (timesTamp, format) => {
  * 返回的是一个00:00:00的是时间戳
  */
 const dateToTimesTamp = ts => {
-  return new Date(ts).setHours(0 , 0 ,0 , 0)
+  return new Date(ts).setHours(0, 0, 0, 0)
 },
 
 /**
@@ -40,19 +40,19 @@ const dateToTimesTamp = ts => {
  */
 const preOrNexDay = (ts, num) => {
   let currentDate = new Date(ts);
-  let date = new Date(currentDate.setDate(currentDate.getDate()+num))
+  let date = new Date(currentDate.setDate(currentDate.getDate() + num))
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   let day = date.getDate() + 1;
 
-  month = month < 10 ? ("0"+ month) : month;
+  month = month < 10 ? ("0" + month) : month;
 
-  if(ts.includes("-")) {
+  if (ts.includes("-")) {
     date = `${year}-${month}-${day}`;
-  }else if(ts.includes("/")) {
+  } else if (ts.includes("/")) {
     date = `${year}/${month}/${day}`;
   } else {
-    date = `${year}-${month}-${day}`;
+    date = `${year}-${month}-${day}`;ßß
   }
 
   return date
