@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex_explore</title>
+  <style type="text/css">
+    .flex-warp{
+      display: flex;
+      width: 100%;
+      background-color: teal;
+      /* 水平排列方式*/
+      flex-direction: row; /* row:主轴水平方向 row-reverse:起点在右端 column: 垂直方向 column-reverse:垂直方向起点在下沿*/
+      /* 是否换行 */
+      flex-wrap: wrap; /* flex-wrap wrap wrap-reverse*/
+      /*水平对齐方式*/
+      justify-content: flex-start; /* flex-start flex-end center spac-between space-around*/
+      /*垂直排列方式*/
+      align-items: flex-start; /* flex-start flex-end center baseline stretch*/
+      /*多咒对齐方式*/
+      align-content: flex-start; /* flex-start flex-end center stretch space-between space-around*/
+    }
+    .flex-item{
+      width: 100px;
+      height: 30px;
+      background-color: turquoise;
+      order: 0; /* 项目的排列顺序 数值越小 排列越靠前 默认为 0*/
+      flex-grow: 0; /* 项目的放大比例 默认为0 如果空间剩余 该项进行放大*/
+      flex-shrink: 0; /* 项目的缩小比例额 默认为0 空间不足 该项进行缩小*/
+      flex-basis: 200px; /* */
+      /* flex: none; */
+      align-self: unset; /* 允许单个项目与其他项目有不一样的堆起方式*/
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-warp">
+    <div class="flex-item">1122</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+    <div class="flex-item">1111</div>
+  </div>
+</body>
+</html>
