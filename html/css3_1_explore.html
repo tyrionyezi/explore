@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .circle{
+      width: 50px;
+      height: 50px;
+      background-color: orangered;
+      border-radius: 50%;
+      transform: translate(-100px,-65px);
+      z-index: 1;
+      animation: ball-jumping 3s ease-in-out infinite;
+    }
+    .shadow{
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transform: translate(-90px,-57px);
+      background-color: darkgrey;
+      animation: ball-shadow 3s ease-in-out infinite;
+    }
+    .trm{
+      width: 150px;
+      height: 30px;
+      transform: skew(78deg,-14deg);
+      border: 1px solid grey;
+      box-shadow: -9px 1px 1px 1px #4a4545;
+    }
+    @keyframes ball-jumping {
+      /* 20%, 80% {
+        transform: translate(-100px,-65px);
+      } */
+
+      50% {
+        transform: translate(-100px,-15px);
+        /* box-shadow: 0px 5px 0px 5px gray; */
+      }
+    }
+    @keyframes ball-shadow {
+      20%, 80% {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        transform: translate(-87px,-21px);
+        background-color: #797474;
+        /* transition: 2s */
+      }
+
+      50% {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transform: translate(-30px,-10px);
+        background-color: #463e3e;
+        /* box-shadow: 0px 5px 0px 5px gray; */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="trm"></div>
+  <div class="circle"></div>
+  <div class="shadow"></div>
+</body>
+</html>
