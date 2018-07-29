@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="drawing" width="500" height="500" style="border:1px solid #c3c3c3;">1231231</canvas>
+  <script>
+    var drawing = document.getElementById('drawing');
+    var context = drawing.getContext("2d");
+    // context.strokeStyle = "red";
+    // context.fillStyle = "#ff0000"
+    // context.fillRect(10, 10, 50, 50);
+    // context.fillStyle = "gray";
+    // context.fillRect(30, 30, 50, 50)
+    // context.moveTo(10,10);
+    // context.lineTo(150,50);
+    // context.lineTo(10,50);
+    // context.stroke();
+    // context.beginPath();
+    // context.arc(100, 100, 99, 0, 2 * Math.PI, false)
+    // context.moveTo(194, 200)
+    // context.arc(100, 100, 94, 0, 2 * Math.PI, false)
+    // context.stroke();
+    // console.log(context)
+
+    context.beginPath();
+    context.arc(100, 100, 99, 0, 2 * Math.PI, false)
+    context.moveTo(194, 100);
+    context.arc(100, 100, 94, 0, 2 * Math.PI, false)
+
+   context.translate(100, 100);
+  
+    context.moveTo(0, 0);
+ 
+    context.lineTo(0, -85)
+    context.moveTo(0, 0);
+    context.lineTo(-65, 0);
+    context.stroke();
+    if(drawing.getContext){
+      var imgURL = drawing.toDataURL('imgage/png');
+      var imgage = document.createElement("img")
+      imgage.src = imgURL
+      document.body.appendChild(imgage);
+    }
+  </script>
+</body>
+</html>
